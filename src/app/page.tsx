@@ -2,19 +2,26 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Star, Phone, MapPin, Clock, Stethoscope, HeartPulse, User, Users } from 'lucide-react';
+import { Star, Phone, MapPin, Clock, Stethoscope, HeartPulse, User, Users, Shield } from 'lucide-react';
 import StarRating from '@/components/common/star-rating';
-import { services, reviews, CLINIC_LOCATION, CLINIC_PHONE, CLINIC_HOURS } from '@/lib/data';
+import { services, reviews, CLINIC_LOCATION, CLINIC_PHONE, CLINIC_HOURS, faqItems } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 const introImage = PlaceHolderImages.find(p => p.id === "1");
 
 export default function Home() {
   const featuredServices = services.slice(0, 3);
   const featuredReviews = reviews.slice(0, 3);
+  const featuredFaqs = faqItems.slice(0, 5);
 
   return (
-    <div className="space-y-20 md:space-y-32">
+    <div className="space-y-20 md:space-y-32 pb-24">
       {/* Hero Section */}
       <section className="bg-accent">
         <div className="container mx-auto flex flex-col items-center justify-center px-4 py-20 text-center md:py-32">
@@ -101,6 +108,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="container mx-auto px-4">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">Why Choose Atlas Health Clinic?</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+            We are committed to providing you with the best possible care.
+          </p>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <Card className="text-center">
+            <CardHeader className="items-center">
+              <div className="bg-primary/10 p-4 rounded-full w-fit">
+                <Users className="h-8 w-8 text-primary" />
+              </div>
+              <CardTitle className="mt-2">Patient-Centric Care</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                We prioritize your needs and comfort, ensuring a personalized and compassionate healthcare experience.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="text-center">
+            <CardHeader className="items-center">
+              <div className="bg-primary/10 p-4 rounded-full w-fit">
+                <Stethoscope className="h-8 w-8 text-primary" />
+              </div>
+              <CardTitle className="mt-2">Experienced Doctors</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Our team consists of highly qualified and experienced medical professionals dedicated to your well-being.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="text-center">
+            <CardHeader className="items-center">
+              <div className="bg-primary/10 p-4 rounded-full w-fit">
+                <Shield className="h-8 w-8 text-primary" />
+              </div>
+              <CardTitle className="mt-2">Modern Facility</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                We use state-of-the-art technology in a clean, modern, and welcoming environment.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Services Preview */}
       <section className="bg-accent py-20 md:py-24">
         <div className="container mx-auto px-4">
@@ -168,6 +226,37 @@ export default function Home() {
           <Button asChild size="lg">
             <Link href="/reviews">Read More Reviews</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-accent py-20 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">Frequently Asked Questions</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+             Find quick answers to common questions about our clinic.
+            </p>
+          </div>
+          <div className="mt-12 max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {featuredFaqs.map((item, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-lg text-left hover:no-underline">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            <div className="mt-12 text-center">
+              <Button asChild size="lg" variant="outline">
+                <Link href="/faq">View All FAQs</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>

@@ -5,15 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Star, Phone, MapPin, Clock, Stethoscope, HeartPulse, User, Users, Shield } from 'lucide-react';
 import StarRating from '@/components/common/star-rating';
 import { services, reviews, CLINIC_LOCATION, CLINIC_PHONE, CLINIC_HOURS, faqItems } from '@/lib/data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-
-const introImage = PlaceHolderImages.find(p => p.id === "1");
 
 export default function Home() {
   const featuredServices = services.slice(0, 3);
@@ -82,18 +79,15 @@ export default function Home() {
       {/* About Us Intro */}
       <section className="container mx-auto px-4">
         <div className="grid items-center gap-12 md:grid-cols-2">
-          {introImage && (
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={introImage.imageUrl}
-                alt={introImage.description}
-                width={600}
-                height={400}
-                className="h-full w-full object-cover"
-                data-ai-hint={introImage.imageHint}
-              />
-            </div>
-          )}
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/clinic-intro.jpg"
+              alt="A welcoming view of the Atlas Health Clinic"
+              width={600}
+              height={400}
+              className="h-full w-full object-cover"
+            />
+          </div>
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               A Clinic That Cares About You

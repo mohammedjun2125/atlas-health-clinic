@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "1",
+      "description": "A welcoming view of the clinic's interior waiting area.",
+      "imageUrl": "https://images.unsplash.com/photo-1731514709874-30eead90613b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjbGluaWMlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NzA1NTI0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clinic interior"
+    },
+    {
+      "id": "2",
+      "description": "Professional headshot of Dr. Aarav Sharma.",
+      "imageUrl": "https://images.unsplash.com/photo-1637059824899-a441006a6875?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwZG9jdG9yfGVufDB8fHx8MTc3MDU3ODgyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male doctor"
+    },
+    {
+      "id": "3",
+      "description": "Professional headshot of Dr. Priya Reddy.",
+      "imageUrl": "https://images.unsplash.com/photo-1683348858658-7c6b0eff2a16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmZW1hbGUlMjBkb2N0b3J8ZW58MHx8fHwxNzcwNTQxMTY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female doctor"
+    },
+    {
+      "id": "4",
+      "description": "Professional headshot of Dr. Vikram Singh.",
+      "imageUrl": "https://images.unsplash.com/photo-1612363584451-cd060fb62018?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxlJTIwZG9jdG9yfGVufDB8fHx8MTc3MDU3ODgyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male doctor"
+    },
+    {
+      "id": "5",
+      "description": "A doctor kindly interacting with a patient.",
+      "imageUrl": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkb2N0b3IlMjBwYXRpZW50fGVufDB8fHx8MTc3MDU1ODk3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "doctor patient"
+    },
+    {
+      "id": "6",
+      "description": "The friendly front desk of the clinic.",
+      "imageUrl": "https://images.unsplash.com/photo-1633111158162-a4835dce7d0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjbGluaWMlMjByZWNlcHRpb258ZW58MHx8fHwxNzcwNjIxMDM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clinic reception"
+    }
+  ]
 }
